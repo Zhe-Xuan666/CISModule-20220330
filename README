@@ -1,0 +1,36 @@
+update.2022/02/25:
+modify the program flow, delete CUDA file. 
+now you can access image data via pointer.
+
+update.2022/03/01:
+add cvt_ByteOrder func. to convert byte order.
+add a new folder to measure execution time.
+
+update.2022/03/10:
+add new debug message printout to trace code.
+add new parameter into cvt_ByteOrder func. to switch different pixel_bit case.
+modify 002_make_executableFile sample code to while loop struct.
+in 002_make_executableFile folder, add new conditional to detect. if data is same 5 times, stop write file.
+
+update.2022/03/17:
+modify 001_make_staticLib/src/get_image.c, change process flow. Solve the problem of receiving photos abnormally.
+add RAW6/7/8/16/20 into cvt_ByteOrder func.
+
+update.2022/03/18:
+use cam_get_image_ext_fmt func. instead of cam_get_image func.
+cam_get_image_ext_fmt has new parameter "fmt", 
+you can put in UINT_8/UINT_16/UINT_32/FLOAT_32 to select different data type.
+
+update.2022/03/23:
+add new file and path into 000_Modified Code folder to make Xavier can support RAW8/10/12/16.
+modify camera_close function in 001_make_staticLib/src/get_image.c.
+
+update.2022/03/30:
+add new file and path into 000_Modified Code folder to make Xavier can support RAW16.
+add new folder "002_make_executableFile_float" as sample code to show how to use float case.
+update sample code in "002_make_executableFile".
+modify camera_close function in "001_make_staticLib/src/get_image.c".
+add new function in "001_make_staticLib/src/get_image.c".
+cvt_ByteOrder_float: /* Convert Data Byte Order */
+cam_get_image_ext_fmt: /* Use fmt to decide output buffer format */
+change_raw_fmt: /* reset stream and format to clear buf */
